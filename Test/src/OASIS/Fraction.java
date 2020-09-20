@@ -75,7 +75,7 @@ public class Fraction {
      * add Function .
      */
     public Fraction add(Fraction fac) {
-        int ucln = GCD(this.denominator, fac.denominator);
+
         this.reduce();
         fac.reduce();
 
@@ -83,7 +83,7 @@ public class Fraction {
             temp.numerator = this.numerator + fac.numerator;
             temp.denominator = fac.denominator;
         } else {
-            temp.numerator = (this.numerator * fac.denominator + fac.numerator * this.denominator) / ucln;
+            temp.numerator = (this.numerator * fac.denominator + fac.numerator * this.denominator) ;
             temp.denominator = fac.denominator * this.denominator;
         }
         return temp.reduce();
@@ -93,11 +93,13 @@ public class Fraction {
      * sub Function .
      */
     public Fraction subtract(Fraction fac) {
-        int ucln = GCD(this.denominator, fac.denominator);
+
         this.reduce();
         fac.reduce();
-        temp.numerator = (this.numerator * fac.denominator - fac.numerator * this.denominator) / ucln;
-        temp.denominator = fac.denominator * this.denominator;
+//        temp.numerator = (this.numerator * fac.denominator - fac.numerator * this.denominator);
+//        temp.denominator = fac.denominator * this.denominator;
+        fac.numerator=-fac.numerator;
+        this.add(fac);
         return temp.reduce();
     }
 

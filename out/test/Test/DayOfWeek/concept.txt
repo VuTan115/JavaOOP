@@ -1,0 +1,19 @@
+Khái  Doomsday: là ngày cuối cùng của tháng 2 năm đó.
+        =>cách tính thứ ngày tháng của 1 ngày bất kì ta dựa vào ngày doomsday.
+        =>các tháng CHẴN sẽ có thứ trùng với doomsday của năm đó
+          ví dụ : doomsday của 2004 là chủ nhật =>> cách ngày 4/4,6/6,8/8,10/10,12/12 cũng là ngày chủ nhật
+        =>các tháng LẺ như 5,7,9,11 thì các ngày 5/9,9/5,11/7,7/11 sẽ có cùng thứ với doomsday
+        còn tháng 3 thì 7/3 sẽ có cùng thứ với doomsday.
+        với tháng 1 thường thì 31/1 sẽ ==doomsday, còn với tháng 1 năm nhuận thì 31/1 sẽ là doomsday-1;Niệm
+Cách tính Doomsday:
+vì năm nhuận có 366 ngày mà 366%7=2 => năm trước năm nhuận 1 năm sẽ có ngày doomsday =doomsday(năm nhuận) -2;
+                                       năm trước năm thường 1 năm thì sẽ có doomsday =doomsday(sau) -1 ngày
+blablabla....nếu quan tâm có thể tham khảo tại :https://soha.vn/kham-pha/meo-cuc-nhanh-de-tinh-thu-cua-mot-ngay-bat-ky-trong-nam-2016012808550763.htm
+còn nếu k thì tính theo cong thứ sau
+d (ngày)
+m (tháng)
+y (năm)
+y0 = y - (14 - m) / 12
+x = y0 + y0/4 - y0/100 + y0/400
+m0 = m + 12 * ((14 - m) / 12) - 2
+d0 = (d + x + (31*m0)/ 12) mod 7
